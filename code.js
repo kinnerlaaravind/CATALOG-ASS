@@ -28,7 +28,6 @@ function lagrangeInterpolation(points) {
 function findConstantTerm(data) {
     const n = data.keys.n;
     const k = data.keys.k;
-    // Decode the points
     const points = [];
     for (let i = 1; i <= n; i++) {
         if (data[i]) {
