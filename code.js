@@ -1,10 +1,10 @@
 import { data1, data2, data3 } from './input.js';
-// Function to decode a value from a given base to decimal
+
 function decodeValue(base, value) {
     return parseInt(value, base);
 }
 
-// Function to perform Lagrange interpolation and find the constant term
+
 function lagrangeInterpolation(points) {
     let c = 0;
     const k = points.length;
@@ -24,7 +24,7 @@ function lagrangeInterpolation(points) {
     }
     return Math.round(c);
 }
-// Main function to read JSON input and calculate the constant term
+
 function findConstantTerm(data) {
     const n = data.keys.n;
     const k = data.keys.k;
@@ -39,13 +39,13 @@ function findConstantTerm(data) {
             points.push([x, y]);
         }
     }
-    // Select the first k points for interpolation
+
     const selectedPoints = points.slice(0, k);
-    // Calculate the constant term using Lagrange interpolation
+
     const constantTerm = lagrangeInterpolation(selectedPoints);
     console.log('Constant term (c):', constantTerm);
 }
-// Load data from JSON files
+
 function loadDataAndCompute(data) {
     findConstantTerm(data);
 }
